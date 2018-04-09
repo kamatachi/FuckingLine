@@ -11,17 +11,17 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 
-nadya = LINE()
-#nadya = LINE("TOKEN KAMU")
-#nadya = LINE("Email","Password")
-nadya.log("Auth Token : " + str(nadya.authToken))
-channelToken = nadya.getChannelResult()
+Fucking = LINE()
+#Fucking = LINE("TOKEN KAMU")
+#Fucking = LINE("Email","Password")
+Fucking.log("Auth Token : " + str(nadya.authToken))
+channelToken = Fucking.getChannelResult()
 nadya.log("Channel Token : " + str(channelToken))
 
-nadyaMID = nadya.profile.mid
-nadyaProfile = nadya.getProfile()
-lineSettings = nadya.getSettings()
-oepoll = OEPoll(nadya)
+MID = Fucking.profile.mid
+Profile = Fucking.getProfile()
+lineSettings = Fucking.getSettings()
+oepoll = OEPoll(Fucking)
 #==============================================================================#
 readOpen = codecs.open("read.json","r","utf-8")
 settingsOpen = codecs.open("temp.json","r","utf-8")
@@ -75,8 +75,8 @@ def sendMessageWithMention(to, mid):
         logError(error)
         
 def helpmessage():
-    helpMessage = "╔═══════════════" + "\n" + \
-                  "╠♥ ✿✿✿ NADYA_TJ ✿✿✿ ♥" + "\n" + \
+    helpMessage = "╔═══════════════" + "Fuckin"\n" + \
+                  "╠♥ ✿✿✿ F"\n" + \
                   "║" + "\n" + \
                   "╠══✪〘 Help Message 〙✪══" + "\n" + \
                   "║" + "\n" + \
@@ -151,7 +151,7 @@ def helpmessage():
                   "╠➥ SearchImage「Search」" + "\n" + \
                   "╠➥ ScreenshootWebsite「LinkUrl」" + "\n" + \
                   "║" + "\n" + \
-                  "╚═〘 Credits By: ©Nadya_TJ™  〙"
+                  "╚═〘 Credits By: ©Fuckin
     return helpMessage
     
 def helptexttospeech():
@@ -210,7 +210,7 @@ def helptexttospeech():
                          "╠ vi : Vietnamese" + "\n" + \
                          "╠ cy : Welsh" + "\n" + \
                          "╚══[ Jangan Typo ]" + "\n" + "\n\n" + \
-                          "Contoh : say-id Nadya Cantik"
+                          "Contoh : say-id Fucking Is Shit"
     return helpTextToSpeech
     
 def helptranslate():
@@ -322,7 +322,7 @@ def helptranslate():
                        "╠ fil : Filipino" + "\n" + \
                        "╠ he : Hebrew" + "\n" + \
                        "╚══[ Jangan Typo ]" + "\n" + "\n\n" + \
-                         "Contoh : tr-id Nadya Cantik"
+                         "Contoh : tr-id Fucking Is Shit"
     return helpTranslate
 #==============================================================================#
 def lineBot(op):
@@ -333,7 +333,7 @@ def lineBot(op):
         if op.type == 5:
             print ("[ 5 ] NOTIFIED ADD CONTACT")
             if settings["autoAdd"] == True:
-                nadya.sendMessage(op.param1, "Halo {} terimakasih telah menambahkan saya sebagai teman :D".format(str(nadya.getContact(op.param1).displayName)))
+                nadya.sendMessage(op.param1, "Halo {} terimakasih telah menambahkan saya sebagai teman :D".format(str(FuckingetContact(op.param1).displayName)))
         if op.type == 13:
             print ("[ 13 ] NOTIFIED INVITE GROUP")
             group = nadya.getGroup(op.param1)
@@ -499,7 +499,7 @@ def lineBot(op):
                             if mention["M"] not in lists:
                                 lists.append(mention["M"])
                         for ls in lists:
-                            contact = nadya.getContact(ls)
+                            contact = tact(ls)
                             mi_d = contact.mid
                             nadya.sendContact(msg.to, mi_d)
                 elif msg.text.lower().startswith("stealmid "):
